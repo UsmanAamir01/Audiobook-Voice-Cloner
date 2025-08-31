@@ -27,6 +27,9 @@ except ImportError:
 
 # Voice cloning integration
 try:
+    import sys
+    import os
+    sys.path.append(os.path.dirname(__file__))
     from voice_cloner import VoiceCloner
     VOICE_CLONING_AVAILABLE = True
 except ImportError:
@@ -359,6 +362,9 @@ class AudiobookGenerator:
     
     def create_cloned_audiobook_from_json(self, json_file_path, output_path=None, voice_model_name=None):
         """Create audiobook using cloned voice from extracted JSON data"""
+        import sys
+        import os
+        sys.path.append(os.path.dirname(__file__))
         from voice_cloner import VoiceCloner
         
         # Load JSON data
@@ -504,6 +510,9 @@ class AudiobookGenerator:
     
     def train_voice_model(self, voice_samples_dir, model_name):
         """Train a new voice model from voice samples"""
+        import sys
+        import os
+        sys.path.append(os.path.dirname(__file__))
         from voice_cloner import VoiceCloner
         
         try:
@@ -521,6 +530,9 @@ class AudiobookGenerator:
     
     def analyze_voice_sample(self, audio_file_path):
         """Analyze a voice sample and return characteristics"""
+        import sys
+        import os
+        sys.path.append(os.path.dirname(__file__))
         from voice_cloner import VoiceCloner
         
         try:
@@ -533,6 +545,21 @@ class AudiobookGenerator:
         except Exception as e:
             self.logger.error(f"Error analyzing voice sample: {e}")
             raise
+    
+    def _get_audio_duration(self, audio_path: str) -> float:
+        """Get audio duration in seconds (private method)"""
+        try:
+            if PYDUB_AVAILABLE:
+                audio = AudioSegment.from_wav(audio_path)
+                return len(audio) / 1000.0  # Convert to seconds
+            else:
+                # Fallback: estimate based on file size (very rough)
+                file_size = os.path.getsize(audio_path)
+                # Rough estimate: 1 MB ≈ 60 seconds for WAV
+                return file_size / (1024 * 1024) * 60
+        except Exception as e:
+            self.logger.warning(f"Could not get audio duration for {audio_path}: {e}")
+            return 0.0
 
 def main():
     """Main function"""

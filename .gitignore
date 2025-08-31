@@ -229,15 +229,24 @@ temp_*.mp3
 temp_*.m4a
 *.tmp.wav
 *.tmp.mp3
+temp_enhanced_speech.wav
+enhanced_voice_test.wav
 
 # Large audio files (>10MB)
 *_large.wav
 *_large.mp3
 *_complete_audiobook.wav
+*_personalized_audiobook.wav
 
 # Audio processing cache
 audio_cache/
 temp_audio/
+
+# Test files and samples
+test_*.wav
+test_*.mp3
+test_*.json
+enhanced_voice_test.*
 
 # -------------------------------------------------------------------------
 # Voice Models & Training Data
@@ -265,6 +274,13 @@ tortoise_cache/
 data/*_large.pdf
 data/*.pdf.bak
 
+# FFmpeg installation files
+ffmpeg/
+ffmpeg-*.zip
+ffmpeg-*.tar.xz
+ffmpeg-essentials.*
+data/ffmpeg-*
+
 # Extracted text cache
 extracted_text/cache/
 extracted_text/temp/
@@ -272,6 +288,10 @@ extracted_text/temp/
 # PDF processing temporary files
 *.pdf.tmp
 pdf_temp/
+
+# Test and setup files
+test_ffmpeg_setup.py
+test_audiobook.json
 
 # -------------------------------------------------------------------------
 # Streamlit & Web Framework

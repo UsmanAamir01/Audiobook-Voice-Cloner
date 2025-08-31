@@ -81,7 +81,7 @@ class PDFTextExtractor:
         
         return text
     
-    def extract_pdf_text(self, pdf_path: str) -> str:
+    def extract_text(self, pdf_path: str) -> str:
         """Extract text from PDF using best available method"""
         self.logger.info(f"Extracting text from: {pdf_path}")
         
@@ -102,6 +102,10 @@ class PDFTextExtractor:
         except Exception as e:
             self.logger.error(f"Error extracting PDF: {e}")
             raise
+    
+    def extract_pdf_text(self, pdf_path: str) -> str:
+        """Alias for extract_text method for backward compatibility"""
+        return self.extract_text(pdf_path)
     
     def clean_text(self, text: str) -> str:
         """Clean extracted text"""
@@ -232,6 +236,29 @@ class PDFTextExtractor:
         
         return sections
     
+    def structure_text(self, text_file: str) -> str:
+        """Structure plain text into sections"""
+        try:
+            # Read the plain text file
+            with open(text_file, 'r', encoding='utf-8') as f:
+                text = f.read()
+            
+            # Detect sections
+            sections = self.detect_sections(text)
+            
+            if not sections:
+                raise Exception("No sections could be created")
+            
+            # Get output name from the text file
+            output_name = Path(text_file).stem.replace('_full_text', '')
+            
+            # Save structured text
+            return self.save_structured_text(sections, output_name)
+            
+        except Exception as e:
+            self.logger.error(f"Error structuring text: {e}")
+            raise
+    
     def save_structured_text(self, sections: Dict[str, str], output_name: str) -> str:
         """Save structured text to JSON file"""
         output_file = self.output_dir / f"{output_name}_structured.json"
@@ -282,7 +309,7 @@ class PDFTextExtractor:
         self.logger.info(f"Starting PDF processing: {pdf_path}")
         
         # Extract text
-        raw_text = self.extract_pdf_text(pdf_path)
+        raw_text = self.extract_text(pdf_path)
         
         if not raw_text.strip():
             raise Exception("No text could be extracted from PDF")
