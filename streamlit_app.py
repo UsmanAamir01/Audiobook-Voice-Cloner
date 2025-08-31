@@ -9,6 +9,11 @@ import streamlit as st
 import os
 import sys
 from pathlib import Path
+
+# Configure for cloud deployment
+if 'STREAMLIT_CLOUD' in os.environ or 'DYNO' in os.environ:
+    # Running on cloud platform
+    os.environ['MPLBACKEND'] = 'Agg'  # Use non-interactive backend
 import time
 import json
 import subprocess

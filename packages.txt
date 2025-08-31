@@ -1,0 +1,4 @@
+espeak
+espeak-data
+libespeak-dev
+ffmpeg
