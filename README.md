@@ -76,8 +76,8 @@ The **AI Audiobook Generator** is a comprehensive solution that converts PDF doc
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/ai-audiobook-generator.git
-   cd ai-audiobook-generator
+   git clone https://github.com/UsmanAamir01/Audiobook-Voice-Cloner.git
+   cd Audiobook-Voice-Cloner
    ```
 
 2. **Create Virtual Environment**
@@ -139,7 +139,7 @@ The **AI Audiobook Generator** is a comprehensive solution that converts PDF doc
 ### 📁 Project Structure
 
 ```
-ai-audiobook-generator/
+Audiobook-Voice-Cloner/
 ├── 📱 streamlit_app.py              # Main Streamlit application
 ├── 📋 requirements.txt              # Python dependencies
 ├── 📖 README.md                     # Project documentation
@@ -368,7 +368,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ai-audiobook-generator.git
+git clone https://github.com/UsmanAamir01/Audiobook-Voice-Cloner.git
 
 # Install development dependencies
 pip install -r requirements-dev.txt
@@ -417,8 +417,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Getting Help
 
 - 📖 **Documentation**: Comprehensive guides and API reference
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/ai-audiobook-generator/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/ai-audiobook-generator/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/UsmanAamir01/Audiobook-Voice-Cloner/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/UsmanAamir01/Audiobook-Voice-Cloner/discussions)
 - 📧 **Email**: support@ai-audiobook-generator.com
 
 ### Community
