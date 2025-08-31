@@ -1,0 +1,142 @@
+# ============================================================================
+# AI Audiobook Generator - Requirements File
+# Production-ready dependencies for voice cloning and audiobook generation
+# ============================================================================
+
+# -------------------------------------------------------------------------
+# Core Framework Dependencies
+# -------------------------------------------------------------------------
+streamlit>=1.28.0           # Web application framework
+pandas>=1.5.0               # Data manipulation for text processing
+
+# -------------------------------------------------------------------------
+# PDF Processing & Text Extraction
+# -------------------------------------------------------------------------
+PyMuPDF>=1.23.0             # Fast PDF text extraction and processing
+PyPDF2>=3.0.0               # Alternative PDF processing library
+
+# -------------------------------------------------------------------------
+# Audio Processing & TTS Core
+# -------------------------------------------------------------------------
+pyttsx3>=2.90               # Primary cross-platform TTS engine
+pydub>=0.25.1               # Audio manipulation and format conversion
+soundfile>=0.12.1           # Audio file I/O operations
+numpy>=1.24.0               # Numerical computing for audio processing
+
+# -------------------------------------------------------------------------
+# Voice Cloning & Analysis
+# -------------------------------------------------------------------------
+librosa>=0.10.0             # Advanced audio analysis and feature extraction
+scipy>=1.10.0               # Scientific computing for audio processing
+
+# -------------------------------------------------------------------------
+# Audio Format Support
+# -------------------------------------------------------------------------
+mutagen>=1.47.0             # Audio metadata handling (MP3, M4A, etc.)
+
+# -------------------------------------------------------------------------
+# File System & Utilities
+# -------------------------------------------------------------------------
+pathlib2>=2.3.7            # Enhanced path operations
+Pillow>=10.0.0              # Image processing for UI components
+
+# -------------------------------------------------------------------------
+# Optional Advanced Features (Uncomment if needed)
+# -------------------------------------------------------------------------
+
+# For Enhanced Voice Cloning (requires additional setup):
+# torch>=2.0.0                # PyTorch for advanced ML models
+# torchaudio>=2.0.0           # PyTorch audio processing
+# TTS>=0.20.0                 # Coqui TTS for high-quality voice synthesis
+# tortoise-tts                # State-of-the-art voice cloning
+
+# For Advanced Audio Processing:
+# pyaudio>=0.2.11             # Real-time audio I/O
+# wave>=0.0.2                 # WAV file processing
+
+# For Cloud Storage Integration:
+# boto3>=1.26.0               # AWS S3 integration
+# google-cloud-storage>=2.8.0 # Google Cloud Storage
+
+# For Database Storage:
+# sqlite3                     # Built-in Python SQLite (no install needed)
+# sqlalchemy>=2.0.0           # Advanced database ORM
+
+# For Advanced UI Components:
+# plotly>=5.14.0              # Interactive visualizations
+# streamlit-audio-recorder>=0.0.8  # Audio recording widget
+
+# For Progress Tracking:
+# tqdm>=4.65.0                # Progress bars for long operations
+# colorlog>=6.7.0             # Colored logging output
+
+# -------------------------------------------------------------------------
+# Development Dependencies (for contributors)
+# -------------------------------------------------------------------------
+
+# Testing Framework:
+# pytest>=7.3.0              # Testing framework
+# pytest-cov>=4.0.0          # Coverage reporting
+# pytest-mock>=3.10.0        # Mocking utilities
+
+# Code Quality:
+# black>=23.3.0               # Code formatting
+# flake8>=6.0.0               # Linting
+# isort>=5.12.0               # Import sorting
+# mypy>=1.3.0                 # Type checking
+
+# Documentation:
+# sphinx>=7.0.0               # Documentation generation
+# sphinx-rtd-theme>=1.2.0     # Read the Docs theme
+
+# -------------------------------------------------------------------------
+# Platform-Specific Notes
+# -------------------------------------------------------------------------
+
+# Windows:
+# - pyttsx3 uses Windows SAPI voices automatically
+# - No additional TTS engine installation required
+
+# macOS:
+# - pyttsx3 uses built-in macOS voices
+# - Additional voices available via System Preferences
+
+# Linux:
+# - Requires espeak or festival TTS engine
+# - Install with: sudo apt-get install espeak espeak-data
+
+# -------------------------------------------------------------------------
+# Installation Commands
+# -------------------------------------------------------------------------
+
+# Basic Installation:
+# pip install -r requirements.txt
+
+# Development Installation:
+# pip install -r requirements.txt pytest black flake8
+
+# Advanced Features Installation:
+# pip install -r requirements.txt torch torchaudio TTS
+
+# -------------------------------------------------------------------------
+# Troubleshooting Dependencies
+# -------------------------------------------------------------------------
+
+# If PyMuPDF installation fails:
+# pip install --upgrade pip setuptools wheel
+# pip install PyMuPDF --no-cache-dir
+
+# If pyttsx3 has issues:
+# pip uninstall pyttsx3
+# pip install pyttsx3==2.90
+
+# If audio processing fails:
+# conda install -c conda-forge librosa soundfile
+# or
+# pip install librosa[display] soundfile
+
+# For advanced voice cloning dependencies:
+# These require Visual C++ Build Tools (Windows) and significant disk space
+# CUDA installation recommended for GPU acceleration
+
+# ============================================================================

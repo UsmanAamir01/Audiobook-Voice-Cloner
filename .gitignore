@@ -1,0 +1,540 @@
+# ============================================================================
+# AI Audiobook Generator - Git Ignore File
+# Comprehensive exclusion patterns for Python/AI/Audio processing project
+# ============================================================================
+
+# -------------------------------------------------------------------------
+# Python Generated Files
+# -------------------------------------------------------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# -------------------------------------------------------------------------
+# Virtual Environments & Package Managers
+# -------------------------------------------------------------------------
+
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+venv.bak/
+env.bak/
+
+# Conda environments
+.conda/
+conda-meta/
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+.venv/
+
+# -------------------------------------------------------------------------
+# AI/ML Model Files & Large Binaries
+# -------------------------------------------------------------------------
+
+# Large model files
+*.bin
+*.pth
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.ckpt
+*.safetensors
+
+# Hugging Face cache
+.cache/
+transformers_cache/
+huggingface_hub/
+
+# PyTorch cache
+.torch/
+
+# TensorFlow cache
+.tensorflow/
+
+# ONNX models
+*.onnx
+
+# -------------------------------------------------------------------------
+# Audio Files & Generated Content
+# -------------------------------------------------------------------------
+
+# Generated audiobooks (keep sample files in data/ if needed)
+output/audiobooks/*.wav
+output/audiobooks/*.mp3
+output/audiobooks/*.m4a
+output/audiobooks/*.flac
+
+# Temporary audio files
+temp_*.wav
+temp_*.mp3
+temp_*.m4a
+*.tmp.wav
+*.tmp.mp3
+
+# Large audio files (>10MB)
+*_large.wav
+*_large.mp3
+*_complete_audiobook.wav
+
+# Audio processing cache
+audio_cache/
+temp_audio/
+
+# -------------------------------------------------------------------------
+# Voice Models & Training Data
+# -------------------------------------------------------------------------
+
+# Trained voice models (keep essential ones, exclude large files)
+voice_models/*.bin
+voice_models/*.pth
+voice_models/cache/
+
+# Personal voice samples (keep samples but exclude temporary files)
+voice_samples/temp/
+voice_samples/*/temp_*
+voice_samples/*/*.tmp
+
+# Voice cloning cache
+voice_cloning_cache/
+tortoise_cache/
+
+# -------------------------------------------------------------------------
+# PDF Files & Extracted Text
+# -------------------------------------------------------------------------
+
+# Large PDF files (>50MB) - keep smaller sample PDFs
+data/*_large.pdf
+data/*.pdf.bak
+
+# Extracted text cache
+extracted_text/cache/
+extracted_text/temp/
+
+# PDF processing temporary files
+*.pdf.tmp
+pdf_temp/
+
+# -------------------------------------------------------------------------
+# Streamlit & Web Framework
+# -------------------------------------------------------------------------
+
+# Streamlit cache
+.streamlit/
+
+# Session state files
+streamlit_session_*
+
+# -------------------------------------------------------------------------
+# Logs & Debug Files
+# -------------------------------------------------------------------------
+
+# Application logs
+logs/*.log
+*.log
+*.log.*
+
+# Debug files
+debug/
+debug_*.txt
+debug_*.json
+
+# Crash dumps
+crash_*.dmp
+
+# -------------------------------------------------------------------------
+# IDE & Editor Files
+# -------------------------------------------------------------------------
+
+# Visual Studio Code
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/c_cpp_properties.json
+.vscode/ipch/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# -------------------------------------------------------------------------
+# Operating System Files
+# -------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# -------------------------------------------------------------------------
+# Cloud Storage & Sync
+# -------------------------------------------------------------------------
+
+# Google Drive
+.gdrive/
+
+# Dropbox
+.dropbox/
+.dropbox.cache/
+
+# OneDrive
+OneDrive - */
+
+# -------------------------------------------------------------------------
+# Database Files
+# -------------------------------------------------------------------------
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Database backups
+*.db.bak
+*.sql.bak
+
+# -------------------------------------------------------------------------
+# Configuration & Secrets
+# -------------------------------------------------------------------------
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Configuration files with secrets
+config/secrets.*
+secrets/
+*.secret
+*.key
+*.pem
+
+# API keys
+api_keys.json
+credentials.json
+
+# -------------------------------------------------------------------------
+# Backup & Archive Files
+# -------------------------------------------------------------------------
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# -------------------------------------------------------------------------
+# Documentation Build Files
+# -------------------------------------------------------------------------
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# MkDocs
+site/
+
+# -------------------------------------------------------------------------
+# Deployment & Production
+# -------------------------------------------------------------------------
+
+# Docker
+.dockerignore
+Dockerfile.prod
+
+# Kubernetes
+*.yaml.prod
+*.yml.prod
+
+# Terraform
+*.tfstate
+*.tfstate.*
+
+# -------------------------------------------------------------------------
+# Performance & Monitoring
+# -------------------------------------------------------------------------
+
+# Profiling output
+*.prof
+profile_*.txt
+
+# Memory dumps
+*.dmp
+core.*
+
+# -------------------------------------------------------------------------
+# Custom Project Exclusions
+# -------------------------------------------------------------------------
+
+# Project-specific temporary files
+workspace_temp/
+temp_workspace/
+
+# Large sample files (keep smaller ones for testing)
+data/samples/large/
+voice_samples/large/
+
+# User-specific configurations
+user_configs/
+personal_settings.json
+
+# Development experiments
+experiments/
+playground/
+sandbox/
+
+# ============================================================================
+# End of .gitignore
+# ============================================================================
